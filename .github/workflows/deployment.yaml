@@ -1,0 +1,11 @@
+name: Deployment Workflow
+on: [push, workflow_dispatch]
+jobs: 
+  test-code-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run the tes
+        run: |
+         pwd
+         ls -a
+         echo $GITHUB_WORKSPACE
