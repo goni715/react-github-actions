@@ -6,6 +6,6 @@ jobs:
     steps:
       - name: Run the tes
         run: |
-         pwd
-         ls -a
-         echo $GITHUB_WORKSPACE
+         node -v
+         git --version
+         
