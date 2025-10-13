@@ -12,6 +12,16 @@ jobs:
          node-version: 20.19.5
       - name: check node version
         run: node -v
-      - name: build the project
-        run: npm run lint
+  build-code-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: copying the code
+        uses: actions/checkout@v5
+      - name: install node-js
+        uses: actions/setup-node@v5
+        with: 
+         node-version: 20.19.5
+      - name: build project
+        run: npm build
+  
          
