@@ -1,5 +1,10 @@
 name: Deployment Workflow
-on: [push, workflow_dispatch]
+on: 
+  pull_request:
+    types: [opened, reopened]
+  push:
+    branches:
+      - 'main'
 jobs: 
   test-code-job:
     runs-on: ubuntu-latest
